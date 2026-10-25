@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KNUST Data Collection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>KNUST Info Form</h2>
+  <p class="subtitle">Fill and submit - admin gets instant alert</p>
+  
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number (024...)" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    
+    <select id="course" required>
+      <option value="">Select Program</option>
+      <option>Computer Science</option>
+      <option>Information Technology</option>
+      <option>Business Administration</option>
+      <option>Engineering</option>
+      <option>Other</option>
+    </select>
+    
+    <textarea id="msg" rows="3" placeholder="Additional Information"></textarea>
+
+    <button type="button" class="btn-all" onclick="sendAll()">SUBMIT & SEND TO ME</button>
+    <button type="button" class="btn-email" onclick="sendEmail()">Send to Email Only</button>
+    <button type="button" class="btn-whatsapp" onclick="sendWhatsApp()">Send to WhatsApp Only</button>
+    <button type="button" class="btn-sms" onclick="sendSMS()">Send to SMS Only</button>
+
+    <small>Data will be sent to admin instantly</small>
+    <p id="status"></p>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
